@@ -1,0 +1,16 @@
+---
+- name: running a command
+  hosts: iosxe1.lab.example.com
+  tasks: 
+    - name: running a command on cisco device
+      cisco.ios.ios_command: 
+        commands: 
+          - show ip interface brief
+
+- name: running a different command
+  hosts: iosxe2.lab.example.com
+  tasks: 
+    - name: running a command
+      cisco.ios.ios_command: 
+        commands: 
+          - show version
